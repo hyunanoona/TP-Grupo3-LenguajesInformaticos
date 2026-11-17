@@ -1,7 +1,6 @@
 
-
 /*   Variables   */
-:root {
+:root {   /* aquí se guardan las variables*/
     --color-primario: #0B3C5D;     
     --color-secundario: #1D7874;   
     --color-acento: #E7A14B;       
@@ -14,109 +13,111 @@
 }
 
 /*   Reset   */
-* {
+* {   /*todos los elementos de la página*/
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 /*   Body */
-body {
-    font-family: var(--fuente-texto);
-    font-size: 16px;
-    line-height: 1.7;
+body {   /*todo el contenido visible de la página*/
+    font-family: var(--fuente-texto);      
+    font-size: 16px;                                    /*tamaño base del texto*/
+    line-height: 1.7;                                   /*espacio entre renglones*/
     color: var(--color-texto);
     background-color: var(--color-fondo);
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 1rem;
+    max-width: 1100px;                      /*para que no se estire en pantallas grandes.*/
+    margin: 0 auto;                         /*centra el body horizontalmente.*/
+    padding: 0 1rem;                        /* espacio a los lados*/
 }
 
-p {
-    margin-bottom: 1rem;
+p {   /*párrafos de texto*/
+    margin-bottom: 1rem;                    /*Los párrafos tienen 1rem (16px) de separación hacia abajo*/
 }
 
-ul, ol {
+ul, ol {   /*listas con viñetas (ul) y numeradas (ol)*/
+    
     margin: 0 0 1rem 1.5rem;
 }
 
-li {
-    margin-bottom: 0.4rem;
+li {   /*cada elemento de una lista*/
+
+    margin-bottom: 0.4rem;    /*espacio entre cada elemento de la lista*/
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 1rem 0;
-    border-radius: 8px;
-}
+img {   /*imágenes*/
+    max-width: 100%;    /*la imagen nunca se sale de su contenedor*/
+    height: auto;       /*mantiene la proporción al reducirse*/
+    display: block;    
+    margin: 1rem 0;     /*1rem de espacio arriba y abajo, 0 a los lados.*/
+    border-radius: 8px; /*esquinas redondeadas*/
+} 
 
 /*   Títulos   */
-h1, h2, h3 {
+h1, h2, h3 {   /*títulos de nivel 1, 2 y 3 (estilos en común)*/
     font-family: var(--fuente-titulos);
     line-height: 1.25;
 }
 
-h1 {
+h1 {   /*título principal*/
     font-size: 2.5rem;
     color: var(--color-primario);
 }
 
-h2 {
+h2 {   /*subtítulo de sección*/
     font-size: 1.8rem;
     color: var(--color-secundario);
-    margin-bottom: 1rem;
+    margin-bottom: 1rem;  /*separación hacia abajo*/
 }
 
-h3 {
-    font-size: 1.3rem;
+h3 {   /*título de tercer nivel*/
+    font-size: 1.3rem;   /*(≈21px)*/
     color: var(--color-primario);
     margin-bottom: 0.6rem;
 }
 
 /*   Enlaces generales */
-a {
+a {   /*enlaces*/
     color: var(--color-secundario);
 }
 
-a:hover {
+a:hover {   /*enlace al pasar el mouse por encima*/
     color: var(--color-primario);
-    text-decoration: none;
+    text-decoration: none;  /*quita el subrayado*/
 }
 
 /*   Header  */
-header {
+header {   /*encabezado de la página (título y menú)*/
     background-color: var(--color-primario);
-    color: white;
-    padding: 2rem 1.5rem;
-    border-radius: 0 0 12px 12px;
+    color: white;                           /*texto blanco*/
+    padding: 2rem 1.5rem;                             /*Es el espacio interno del encabezado.*/
+    border-radius: 0 0 12px 12px;                    /*solo se redondean las esquinas de abajo, y las de arriba quedan rectas*/
 }
 
-header h1 {
+header h1 {   /*el h1 que está dentro del header*/
     color: white;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.5rem;            /*separación con el párrafo que sigue*/
 }
 
-header p {
-    margin-bottom: 1rem;
-    font-style: italic;
+header p {   /*los párrafos dentro del header*/
+    margin-bottom: 1rem;             /*separación hacia abajo*/
+    font-style: italic;                 /*va en cursiva*/
 }
 
 /*  Navegación principal (header)   */
-header nav ul {
-    display: flex;
-    flex-wrap: wrap;
+header nav ul {   /*la lista del menú dentro del header*/
+    display: flex;              /*pasan de apilarse verticalmente a ponerse en fila*/
+    flex-wrap: wrap;            /*si no entran en una línea,bajan a la siguiente en vez de desbordar*/
     gap: 1.5rem;
-    list-style: none;
+    list-style: none;            /*quita las viñetas*/
     margin: 0;
 }
 
-header nav li {
+header nav li {   /*cada opción del menú*/
     margin-bottom: 0;
 }
 
-header nav a {
+header nav a {   /*los enlaces del menú*/
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -124,13 +125,13 @@ header nav a {
     border-bottom: 2px solid transparent;
 }
 
-header nav a:hover {
+header nav a:hover {   /*enlace del menú al pasar el mouse*/
     color: var(--color-acento);
     border-bottom-color: var(--color-acento);
 }
 
 /*   Navegación interna de sección   */
-.nav-seccion {
+.nav-seccion {   /*clase: caja con el menú interno de una sección*/
     background-color: var(--color-tarjeta);
     border: 1px solid var(--color-borde);
     border-radius: 8px;
@@ -138,21 +139,21 @@ header nav a:hover {
     margin-bottom: 1.5rem;
 }
 
-.nav-seccion ul {
+.nav-seccion ul {   /*la lista dentro de esa caja*/
     margin-bottom: 0;
 }
 
 /*   Contenido principal  */
-main {
+main {   /*contenido principal de la página*/
     padding: 2rem 0;
 }
 
-main section {
+main section {   /*secciones dentro del contenido principal*/
     margin-bottom: 2.5rem;
 }
 
 /* Secciones anidadas (index): separación entre bloques */
-main section section {
+main section section {   /*una sección dentro de otra (se ve como tarjeta)*/
     background-color: var(--color-tarjeta);
     border: 1px solid var(--color-borde);
     border-radius: 8px;
@@ -160,12 +161,12 @@ main section section {
     margin-bottom: 1.5rem;
 }
 
-article {
+article {   /*contenido independiente (una nota o entrada)*/
     margin-bottom: 1.5rem;
 }
 
 /* Tarjeta de lugar (lugares.html) */
-.lugar {
+.lugar {   /*clase: tarjeta de un lugar con borde lateral de color*/
     background-color: var(--color-tarjeta);
     border-left: 5px solid var(--color-secundario);
     border-radius: 8px;
@@ -174,7 +175,7 @@ article {
 }
 
 /* Avisos al visitante (index) */
-#avisos {
+#avisos {   /*id: caja de avisos (un solo elemento con ese id)*/
     background-color: #FFF4E0;
     border-left: 5px solid var(--color-acento);
     border-radius: 8px;
@@ -182,41 +183,41 @@ article {
 }
 
 /*   Tablas  */
-table {
+table {   /*tabla*/
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: collapse;  /*une los bordes de las celdas*/
     margin-bottom: 1.5rem;
 }
 
-th, td {
+th, td {   /*celda de encabezado (th) y celda de dato (td)*/
     border: 1px solid var(--color-borde);
     padding: 0.7rem 1rem;
     text-align: left;
 }
 
-thead {
+thead {   /*fila de encabezados de la tabla*/
     background-color: var(--color-primario);
     color: white;
 }
 
-tbody tr:nth-child(even) {
+tbody tr:nth-child(even) {   /*filas pares del cuerpo de la tabla (efecto cebra)*/
     background-color: #E8EFF2;
 }
 
 /*  Formularios  */
-form {
+form {   /*formulario*/
     max-width: 600px;
 }
 
-label {
+label {   /*texto que describe cada campo*/
     display: block;
     font-weight: bold;
     margin-bottom: 0.3rem;
 }
 
-input,
-textarea,
-select {
+input,     /*campo de una línea*/
+textarea,  /*campo de texto largo*/
+select {   /*lista desplegable*/
     width: 100%;
     padding: 0.6rem 0.8rem;
     margin-bottom: 1rem;
@@ -226,37 +227,37 @@ select {
     font-size: 1rem;
 }
 
-input:focus,
+input:focus,     /*cuando el campo está seleccionado (cursor dentro)*/
 textarea:focus,
 select:focus {
     outline: 2px solid var(--color-acento);
 }
 
-button {
+button {   /*botón*/
     background-color: var(--color-primario);
     color: white;
     padding: 0.7rem 1.5rem;
     border: none;
     border-radius: 6px;
     font-size: 1rem;
-    cursor: pointer;
+    cursor: pointer;   /*cursor de manita*/
 }
 
-button:hover {
+button:hover {   /*botón al pasar el mouse*/
     background-color: var(--color-secundario);
 }
 
 /*  Footer   */
-footer {
+footer {   /*pie de página*/
     background-color: var(--color-primario);
     color: white;
     text-align: center;
     padding: 1.5rem;
-    border-radius: 12px 12px 0 0;
+    border-radius: 12px 12px 0 0;   /*solo se redondean las esquinas de arriba*/
     margin-top: 1rem;
 }
 
-footer p {
+footer p {   /*párrafos dentro del footer*/
     margin-bottom: 0;
 }
 
@@ -264,39 +265,39 @@ footer p {
 
 
 /*   Bootstrap - personalizaciones: navbar   */
-header .navbar.bg-dark {
-    background-color: var(--color-primario) !important;
+header .navbar.bg-dark {   /*barra de navegación de Bootstrap con fondo oscuro*/
+    background-color: var(--color-primario) !important;  /*!important para ganarle a Bootstrap*/
     padding: 0;
 }
 
-header .navbar-brand {
+header .navbar-brand {   /*nombre o logo de la barra*/
     font-family: var(--fuente-titulos);
     font-size: 1.5rem;
     border-bottom: 0;
 }
 
-header .navbar-nav {
-    gap: 0.25rem 1.5rem;
+header .navbar-nav {   /*lista de enlaces de la barra de Bootstrap*/
+    gap: 0.25rem 1.5rem;   /*separación vertical y horizontal*/
 }
 
-header .navbar-nav .nav-link {
+header .navbar-nav .nav-link {   /*cada enlace de la barra*/
     color: white;
     font-weight: bold;
-    transition: color 0.2s ease;
+    transition: color 0.2s ease;   /*cambio de color suave*/
 }
 
-header .navbar-nav .nav-link:hover,
-header .navbar-nav .nav-link:focus,
-header .navbar-nav .nav-link.active {
+header .navbar-nav .nav-link:hover,    /*mouse encima*/
+header .navbar-nav .nav-link:focus,    /*seleccionado con el teclado*/
+header .navbar-nav .nav-link.active {  /*página actual*/
     color: var(--color-acento);
 }
 
-header .banner-titulo {
+header .banner-titulo {   /*clase: bloque del título grande bajo el menú*/
     margin-top: 1.5rem;
 }
 
 /*   Bootstrap - personalizaciones: botones   */
-.btn-primary {
+.btn-primary {   /*botón principal de Bootstrap (con relleno)*/
     --bs-btn-bg: var(--color-primario);
     --bs-btn-border-color: var(--color-primario);
     --bs-btn-hover-bg: var(--color-secundario);
@@ -306,7 +307,7 @@ header .banner-titulo {
     transition: background-color 0.2s ease;
 }
 
-.btn-outline-primary {
+.btn-outline-primary {   /*botón de Bootstrap solo con borde (sin relleno)*/
     --bs-btn-color: var(--color-primario);
     --bs-btn-border-color: var(--color-primario);
     --bs-btn-hover-bg: var(--color-primario);
@@ -317,41 +318,41 @@ header .banner-titulo {
 }
 
 /*   Bootstrap - personalizaciones: cards y formularios   */
-.card {
+.card {   /*tarjeta de Bootstrap*/
     border-color: var(--color-borde);
 }
 
-.card-title {
+.card-title {   /*título dentro de una tarjeta*/
     color: var(--color-primario);
 }
 
-.form-control,
-.form-select {
+.form-control,   /*input/textarea de Bootstrap*/
+.form-select {   /*desplegable de Bootstrap*/
     margin-bottom: 0;
     border-color: var(--color-primario);
 }
 
-.form-control:focus,
+.form-control:focus,   /*campos de Bootstrap seleccionados*/
 .form-select:focus {
     border-color: var(--color-secundario);
-    box-shadow: 0 0 0 0.2rem rgba(29, 120, 116, 0.25);
+    box-shadow: 0 0 0 0.2rem rgba(29, 120, 116, 0.25);   /*resplandor alrededor del campo*/
 }
 
-#formulario form {
+#formulario form {   /*el form dentro del elemento con id "formulario"*/
     max-width: none;
 }
 
 /*   Posicionamiento   */
 
-.lugar-img {
-    position: relative;
+.lugar-img {   /*contenedor de la imagen de cada tarjeta de lugar*/
+    position: relative;             /* permite ubicar el badge dentro de este contenedor */
     aspect-ratio: 4 / 3;            /* todas las imágenes miden lo mismo */
     overflow: hidden;               /* recorta el zoom del hover y respeta las esquinas */
     background-color: var(--color-borde); /* fondo si la imagen tarda o no carga */
     border-radius: calc(0.375rem - 1px) calc(0.375rem - 1px) 0 0; /* mismo radio que la card */
 }
 
-.lugar-img img {
+.lugar-img img {   /*la imagen dentro de ese contenedor*/
     display: block;
     width: 100%;
     height: 100%;                   /* llena el contenedor de 4:3 */
@@ -359,15 +360,15 @@ header .banner-titulo {
     object-position: center;
     margin: 0;
     border-radius: 0;               
-    transition: transform 0.4s ease;
+    transition: transform 0.4s ease;   /*el zoom se anima suavemente*/
 }
 
-.lugar-card:hover .lugar-img img {
+.lugar-card:hover .lugar-img img {   /*al pasar el mouse por la tarjeta, la imagen se agranda*/
     transform: scale(1.05);
 }
 
-.lugar-img .badge {
-    position: absolute;
+.lugar-img .badge {   /*etiqueta pequeña (ej. categoría) sobre la imagen*/
+    position: absolute;             /* se coloca libremente dentro de .lugar-img */
     top: 0.75rem;
     left: 0.75rem;
     z-index: 1;                     /* siempre por encima de la imagen */
@@ -375,23 +376,23 @@ header .banner-titulo {
 }
 
 /* Efecto al pasar el mouse sobre las cards de lugares */
-.lugar-card {
+.lugar-card {   /*tarjeta completa de un lugar*/
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.lugar-card:hover {
+.lugar-card:hover {   /*tarjeta al pasar el mouse: sube 4px y muestra sombra*/
     transform: translateY(-4px);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 
-.lugar-card .card-body p {
+.lugar-card .card-body p {   /*texto de las tarjetas, un poco más pequeño*/
     font-size: 0.95rem;
     margin-bottom: 0.6rem;
 }
 
 /*   Flexbox   */
 /* Actividades: ítems en grilla flexible */
-.actividades {
+.actividades {   /*lista de actividades, en fila y bajan si no caben*/
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
@@ -399,7 +400,7 @@ header .banner-titulo {
     margin: 0;
 }
 
-.actividades li {
+.actividades li {   /*cada actividad (flex: crece, se encoge y mide mínimo ~250px)*/
     flex: 1 1 250px;
     background-color: var(--color-tarjeta);
     border: 1px solid var(--color-borde);
@@ -410,7 +411,7 @@ header .banner-titulo {
 }
 
 /*   Contacto   */
-.contacto-datos address {
+.contacto-datos address {   /*datos de contacto (address va en cursiva por defecto)*/
     font-style: normal;
     margin-bottom: 0;
 }
@@ -419,7 +420,7 @@ header .banner-titulo {
 
   /* Estilos del modo oscuro */
 
-body.oscuro {
+body.oscuro {   /*body con la clase "oscuro": redefine las variables de color*/
     --color-fondo: #12191e;
     --color-texto: #f5f5f5;
     --color-tarjeta: #1e2a31;
@@ -429,22 +430,22 @@ body.oscuro {
     color: var(--color-texto);
 }
 
-body.oscuro h2,
+body.oscuro h2,         /*subtítulos, títulos h3 y de tarjetas en verde claro*/
 body.oscuro h3,
 body.oscuro .card-title {
     color: #7fd1cc;
 }
 
-body.oscuro .card {
+body.oscuro .card {   /*tarjetas de Bootstrap con fondo oscuro*/
     background-color: var(--color-tarjeta);
     color: var(--color-texto);
 }
 
-body.oscuro a:hover {
+body.oscuro a:hover {   /*enlaces al pasar el mouse en modo oscuro*/
     color: var(--color-acento);
 }
 
-body.oscuro .btn-outline-primary {
+body.oscuro .btn-outline-primary {   /*botón con borde adaptado al modo oscuro*/
     --bs-btn-color: #7fd1cc;
     --bs-btn-border-color: #7fd1cc;
     --bs-btn-hover-color: #12191e;
@@ -452,24 +453,24 @@ body.oscuro .btn-outline-primary {
     --bs-btn-hover-border-color: #7fd1cc;
 }
 
-body.oscuro .form-control,
+body.oscuro .form-control,   /*campos de formulario con fondo oscuro*/
 body.oscuro .form-select {
     background-color: #12191e;
     color: var(--color-texto);
     border-color: var(--color-borde);
 }
 
-body.oscuro .actividades li,
+body.oscuro .actividades li,   /*texto claro en actividades y avisos*/
 body.oscuro #avisos {
     color: var(--color-texto);
 }
 
-body.oscuro #avisos {
+body.oscuro #avisos {   /*fondo oscuro para la caja de avisos*/
     background-color: #2b2416;
 }
 
 /* Mensajes de validación del formulario */
-.form-control.is-invalid,
+.form-control.is-invalid,   /*clase que Bootstrap agrega a un campo con error*/
 .form-select.is-invalid {
     border-color: #dc3545;
 }
