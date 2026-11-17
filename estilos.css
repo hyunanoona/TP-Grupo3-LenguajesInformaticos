@@ -35,7 +35,7 @@ p {   /*párrafos de texto*/
     margin-bottom: 1rem;                    /*Los párrafos tienen 1rem (16px) de separación hacia abajo*/
 }
 
-ul, ol {   /*listas con viñetas (ul) y numeradas (ol)*/
+ul, ol {   /*listas con viñetas y numeradas*/
     
     margin: 0 0 1rem 1.5rem;
 }
@@ -54,7 +54,7 @@ img {   /*imágenes*/
 } 
 
 /*   Títulos   */
-h1, h2, h3 {   /*títulos de nivel 1, 2 y 3 (estilos en común)*/
+h1, h2, h3 {   
     font-family: var(--fuente-titulos);
     line-height: 1.25;
 }
