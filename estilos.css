@@ -1,22 +1,30 @@
+
+
+/*   Variables   */
 :root {
-    --color-primario: #0B3C5D;
-    --color-secundario: #1D7874;
-    --color-acento: #E7A14B;
+    --color-primario: #0B3C5D;     
+    --color-secundario: #1D7874;   
+    --color-acento: #E7A14B;       
     --color-fondo: #F7F9FA;
     --color-texto: #1A1A1A;
-    --fuente-titulos: "arial", serif;
-    --fuente-texto: "arial", sans-serif;
+    --color-borde: #C9D6DD;
+    --color-tarjeta: #FFFFFF;
+    --fuente-titulos: "Playfair Display", Georgia, serif;
+    --fuente-texto: "Lato", Arial, sans-serif;
 }
 
+/*   Reset   */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/*   Body */
 body {
     font-family: var(--fuente-texto);
     font-size: 16px;
+    line-height: 1.7;
     color: var(--color-texto);
     background-color: var(--color-fondo);
     max-width: 1100px;
@@ -24,29 +32,70 @@ body {
     padding: 0 1rem;
 }
 
+p {
+    margin-bottom: 1rem;
+}
+
+ul, ol {
+    margin: 0 0 1rem 1.5rem;
+}
+
+li {
+    margin-bottom: 0.4rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem 0;
+    border-radius: 8px;
+}
+
+/*   Títulos   */
 h1, h2, h3 {
-    font-family:  var(--fuente-titulos);
+    font-family: var(--fuente-titulos);
+    line-height: 1.25;
+}
+
+h1 {
+    font-size: 2.5rem;
     color: var(--color-primario);
 }
 
+h2 {
+    font-size: 1.8rem;
+    color: var(--color-secundario);
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+    color: var(--color-primario);
+    margin-bottom: 0.6rem;
+}
+
+/*   Enlaces generales */
 a {
     color: var(--color-secundario);
 }
 
 a:hover {
-    color: var(--color-acento);
+    color: var(--color-primario);
+    text-decoration: none;
 }
 
-
+/*   Header  */
 header {
     background-color: var(--color-primario);
     color: white;
     padding: 2rem 1.5rem;
+    border-radius: 0 0 12px 12px;
 }
 
 header h1 {
     color: white;
-    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
 }
 
 header p {
@@ -54,26 +103,46 @@ header p {
     font-style: italic;
 }
 
-nav ul {
+/*  Navegación principal (header)   */
+header nav ul {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
     list-style: none;
+    margin: 0;
 }
 
-nav a {
+header nav li {
+    margin-bottom: 0;
+}
+
+header nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    padding: 0.3rem 0;
+    border-bottom: 2px solid transparent;
 }
 
-nav a:hover {
+header nav a:hover {
     color: var(--color-acento);
+    border-bottom-color: var(--color-acento);
 }
 
+/*   Navegación interna de sección   */
+.nav-seccion {
+    background-color: var(--color-tarjeta);
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+}
 
+.nav-seccion ul {
+    margin-bottom: 0;
+}
 
-
+/*   Contenido principal  */
 main {
     padding: 2rem 0;
 }
@@ -82,7 +151,325 @@ main section {
     margin-bottom: 2.5rem;
 }
 
-main h2 {
-    font-size: 1.8rem;
+/* Secciones anidadas (index): separación entre bloques */
+main section section {
+    background-color: var(--color-tarjeta);
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+article {
+    margin-bottom: 1.5rem;
+}
+
+/* Tarjeta de lugar (lugares.html) */
+.lugar {
+    background-color: var(--color-tarjeta);
+    border-left: 5px solid var(--color-secundario);
+    border-radius: 8px;
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Avisos al visitante (index) */
+#avisos {
+    background-color: #FFF4E0;
+    border-left: 5px solid var(--color-acento);
+    border-radius: 8px;
+    padding: 1.2rem 1.5rem;
+}
+
+/*   Tablas  */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+}
+
+th, td {
+    border: 1px solid var(--color-borde);
+    padding: 0.7rem 1rem;
+    text-align: left;
+}
+
+thead {
+    background-color: var(--color-primario);
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #E8EFF2;
+}
+
+/*  Formularios  */
+form {
+    max-width: 600px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
     margin-bottom: 1rem;
+    border: 1px solid var(--color-primario);
+    border-radius: 6px;
+    font-family: var(--fuente-texto);
+    font-size: 1rem;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid var(--color-acento);
+}
+
+button {
+    background-color: var(--color-primario);
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--color-secundario);
+}
+
+/*  Footer   */
+footer {
+    background-color: var(--color-primario);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 12px 12px 0 0;
+    margin-top: 1rem;
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+
+
+
+/*   Bootstrap - personalizaciones: navbar   */
+header .navbar.bg-dark {
+    background-color: var(--color-primario) !important;
+    padding: 0;
+}
+
+header .navbar-brand {
+    font-family: var(--fuente-titulos);
+    font-size: 1.5rem;
+    border-bottom: 0;
+}
+
+header .navbar-nav {
+    gap: 0.25rem 1.5rem;
+}
+
+header .navbar-nav .nav-link {
+    color: white;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+header .navbar-nav .nav-link:hover,
+header .navbar-nav .nav-link:focus,
+header .navbar-nav .nav-link.active {
+    color: var(--color-acento);
+}
+
+header .banner-titulo {
+    margin-top: 1.5rem;
+}
+
+/*   Bootstrap - personalizaciones: botones   */
+.btn-primary {
+    --bs-btn-bg: var(--color-primario);
+    --bs-btn-border-color: var(--color-primario);
+    --bs-btn-hover-bg: var(--color-secundario);
+    --bs-btn-hover-border-color: var(--color-secundario);
+    --bs-btn-active-bg: var(--color-secundario);
+    --bs-btn-active-border-color: var(--color-secundario);
+    transition: background-color 0.2s ease;
+}
+
+.btn-outline-primary {
+    --bs-btn-color: var(--color-primario);
+    --bs-btn-border-color: var(--color-primario);
+    --bs-btn-hover-bg: var(--color-primario);
+    --bs-btn-hover-border-color: var(--color-primario);
+    --bs-btn-active-bg: var(--color-primario);
+    --bs-btn-active-border-color: var(--color-primario);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/*   Bootstrap - personalizaciones: cards y formularios   */
+.card {
+    border-color: var(--color-borde);
+}
+
+.card-title {
+    color: var(--color-primario);
+}
+
+.form-control,
+.form-select {
+    margin-bottom: 0;
+    border-color: var(--color-primario);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--color-secundario);
+    box-shadow: 0 0 0 0.2rem rgba(29, 120, 116, 0.25);
+}
+
+#formulario form {
+    max-width: none;
+}
+
+/*   Posicionamiento   */
+
+.lugar-img {
+    position: relative;
+    aspect-ratio: 4 / 3;            /* todas las imágenes miden lo mismo */
+    overflow: hidden;               /* recorta el zoom del hover y respeta las esquinas */
+    background-color: var(--color-borde); /* fondo si la imagen tarda o no carga */
+    border-radius: calc(0.375rem - 1px) calc(0.375rem - 1px) 0 0; /* mismo radio que la card */
+}
+
+.lugar-img img {
+    display: block;
+    width: 100%;
+    height: 100%;                   /* llena el contenedor de 4:3 */
+    object-fit: cover;              /* recorta sin deformar */
+    object-position: center;
+    margin: 0;
+    border-radius: 0;               
+    transition: transform 0.4s ease;
+}
+
+.lugar-card:hover .lugar-img img {
+    transform: scale(1.05);
+}
+
+.lugar-img .badge {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    z-index: 1;                     /* siempre por encima de la imagen */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+/* Efecto al pasar el mouse sobre las cards de lugares */
+.lugar-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lugar-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.lugar-card .card-body p {
+    font-size: 0.95rem;
+    margin-bottom: 0.6rem;
+}
+
+/*   Flexbox   */
+/* Actividades: ítems en grilla flexible */
+.actividades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+}
+
+.actividades li {
+    flex: 1 1 250px;
+    background-color: var(--color-tarjeta);
+    border: 1px solid var(--color-borde);
+    border-top: 4px solid var(--color-secundario);
+    border-radius: 8px;
+    padding: 1rem 1.2rem;
+    margin-bottom: 0;
+}
+
+/*   Contacto   */
+.contacto-datos address {
+    font-style: normal;
+    margin-bottom: 0;
+}
+
+
+
+  /* Estilos del modo oscuro */
+
+body.oscuro {
+    --color-fondo: #12191e;
+    --color-texto: #f5f5f5;
+    --color-tarjeta: #1e2a31;
+    --color-borde: #34444d;
+    --color-secundario: #5fc4be;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+body.oscuro h2,
+body.oscuro h3,
+body.oscuro .card-title {
+    color: #7fd1cc;
+}
+
+body.oscuro .card {
+    background-color: var(--color-tarjeta);
+    color: var(--color-texto);
+}
+
+body.oscuro a:hover {
+    color: var(--color-acento);
+}
+
+body.oscuro .btn-outline-primary {
+    --bs-btn-color: #7fd1cc;
+    --bs-btn-border-color: #7fd1cc;
+    --bs-btn-hover-color: #12191e;
+    --bs-btn-hover-bg: #7fd1cc;
+    --bs-btn-hover-border-color: #7fd1cc;
+}
+
+body.oscuro .form-control,
+body.oscuro .form-select {
+    background-color: #12191e;
+    color: var(--color-texto);
+    border-color: var(--color-borde);
+}
+
+body.oscuro .actividades li,
+body.oscuro #avisos {
+    color: var(--color-texto);
+}
+
+body.oscuro #avisos {
+    background-color: #2b2416;
+}
+
+/* Mensajes de validación del formulario */
+.form-control.is-invalid,
+.form-select.is-invalid {
+    border-color: #dc3545;
 }

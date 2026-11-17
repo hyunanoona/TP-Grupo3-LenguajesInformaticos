@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS: antes del CSS propio -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS propio del sitio -->
+    <link rel="stylesheet" href="estilos.css">
+    <title>Contacto - Puerto Aurora</title>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">Puerto Aurora</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#menuPrincipal" aria-controls="menuPrincipal"
+                        aria-expanded="false" aria-label="Abrir menú de navegación">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ciudad.html">La Ciudad</a></li>
+                        <li class="nav-item"><a class="nav-link" href="lugares.html">Lugares de Interés</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="contacto.html">Contacto</a></li>
+                        <li class="nav-item ms-lg-2"><button id="btn-modo" class="btn btn-outline-light btn-sm" type="button" aria-pressed="false">🌙 Modo oscuro</button></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="banner-titulo">
+            <h1>Contacto</h1>
+            <p>Escribinos y planificá tu visita</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="row g-4">
+
+                <section id="datos-contacto" class="col-12 col-lg-5">
+                    <div class="card h-100">
+                        <div class="card-body contacto-datos">
+                            <h2 class="card-title h4">Oficina de Turismo</h2>
+                            <address>
+                                Avenida Juramento C1428. Piso 3. Oficina 8<br>
+                                Teléfono: <a href="tel:+541136638850">+54 11 36638850</a><br>
+                                Email: <a href="mailto:turismo@puertoaurora.gob.ar">turismo@puertoaurora.gob.ar</a>
+                                 <p>Seguinos en instagram como: <a href="https://www.instagram.com/turismoya_/" target="_blank" rel="noopener noreferrer">nuestra_oficina_de_turismo</a></p>
+                            </address>
+                            <div class="alert alert-info mt-3 mb-0" role="alert">
+                                Respondemos todas las consultas dentro de las 48 horas hábiles.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="formulario" class="col-12 col-lg-7">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h2 class="card-title h4">Envianos tu consulta</h2>
+
+                            <div id="mensaje-form" class="alert d-none" role="alert" aria-live="polite"></div>
+
+                            <form id="form-contacto" action="#" method="post" novalidate>
+                                <div class="mb-3">
+                                    <label for="nombre" class="form-label">Nombre y apellido</label>
+                                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="motivo" class="form-label">Motivo de la consulta</label>
+                                    <select class="form-select" id="motivo" name="motivo">
+                                        <option value="">Elegir...</option>
+                                        <option value="informacion">Información turística</option>
+                                        <option value="eventos">Eventos y festivales</option>
+                                        <option value="otro">Otro</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="mensaje" class="form-label">Mensaje</label>
+                                    <textarea class="form-control" id="mensaje" name="mensaje" rows="5" required></textarea>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">Enviar</button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Ciudad de Puerto Aurora - Sitio Oficial de Turismo.</p>
+    </footer>
+
+    <!-- Bootstrap JS: antes del cierre del body -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JS propio del sitio -->
+    <script src="main.js"></script>
+</body>
+</html>
