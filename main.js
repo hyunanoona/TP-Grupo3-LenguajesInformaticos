@@ -13,7 +13,7 @@ const actualizarBoton = () => {
 };
 
 if (botonModo) {
-    // Recuperar la preferencia guardada (si el navegador lo permite)
+    // Recuperar la preferencia guardada si el navegador lo permite
     try {
         if (localStorage.getItem("modo") === "oscuro") {
             document.body.classList.add("oscuro");
