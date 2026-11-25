@@ -75,3 +75,11 @@ if (formulario) {
         formulario.reset();
     });
 }
+
+
+/*  Botones "Ver más" de las tarjetas de lugares  */
+document.querySelectorAll(".btn-ver-mas").forEach((boton) => {
+    const contenido = document.querySelector(boton.dataset.bsTarget);
+    contenido.addEventListener("show.bs.collapse", () => { boton.textContent = "Ver menos"; });
+    contenido.addEventListener("hide.bs.collapse", () => { boton.textContent = "Ver más"; });
+});
