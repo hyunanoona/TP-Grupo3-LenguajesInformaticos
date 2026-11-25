@@ -1,14 +1,14 @@
 
 
-/* ---------- 1) Modo oscuro ---------- */
+/*  Modo oscuro */
 const botonModo = document.getElementById("btn-modo");
 
 // Actualiza el texto del botón según el estado actual
 const actualizarBoton = () => {
     const oscuro = document.body.classList.contains("oscuro");
-    botonModo.textContent = oscuro ? "☀️ Modo claro" : "🌙 Modo oscuro";
+    botonModo.textContent = oscuro ? " Modo claro" : " Modo oscuro";
     botonModo.setAttribute("aria-pressed", oscuro);
-    // Activa también el modo oscuro nativo de Bootstrap (tablas, alerts, etc.)
+    // Activa también el modo oscuro  de Bootstrap 
     document.documentElement.setAttribute("data-bs-theme", oscuro ? "dark" : "light");
 };
 
@@ -28,7 +28,7 @@ if (botonModo) {
                 "modo",
                 document.body.classList.contains("oscuro") ? "oscuro" : "claro"
             );
-        } catch (e) { /* ignorar */ }
+        } catch (e) {  }
         actualizarBoton();
     });
 }
